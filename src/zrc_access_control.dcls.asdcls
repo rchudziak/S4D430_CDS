@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access Control'
+@MappingRole: true
+define role ZRC_ACCESS_CONTROL {
+    grant 
+        select
+            on
+                ZRC_AUTHORIZATIONS
+                    where
+                        (CARRID) = aspect pfcg_auth( S_CARRID, CARRID, ACTVT = '03');
+                        
+}
